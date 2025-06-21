@@ -1,0 +1,146 @@
+/* Reset & Base Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Roboto, sans-serif;
+  background: linear-gradient(to right, #a8e063, #56ab2f); /* 🌿 Green gradient background */
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 15px;
+  color: #333;
+}
+
+/* Main Quiz Container */
+.quiz-container {
+  background: #fff;
+  padding: 35px 45px;
+  border-radius: 16px;
+  max-width: 750px;
+  width: 100%;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.quiz-container:hover {
+  transform: scale(1.01);
+}
+
+/* Heading */
+.quiz-container h1 {
+  text-align: center;
+  color: #2f3e2f;
+  margin-bottom: 25px;
+  font-size: 2rem;
+}
+
+/* Question Text */
+.question {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #1a1a1a;
+}
+
+/* Options Styling */
+.options label {
+  display: block;
+  background: #f2f2f2;
+  padding: 12px 18px;
+  border-radius: 10px;
+  margin-bottom: 14px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: 2px solid transparent;
+}
+
+.options label:hover,
+.options input[type="radio"]:checked + label,
+.options input[type="checkbox"]:checked + label {
+  background-color: #d4f8d4;
+  border-color: #3e8e41;
+}
+
+/* Input inside labels */
+.options input[type="radio"],
+.options input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+/* Fill in the blank input */
+#fill-blank {
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 2px solid #ccc;
+  transition: border 0.2s ease;
+  margin-top: 10px;
+}
+
+#fill-blank:focus {
+  border-color: #56ab2f;
+  outline: none;
+}
+
+/* Buttons */
+.navigation {
+  margin-top: 25px;
+  text-align: center;
+}
+
+button {
+  background-color: #56ab2f;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  margin: 0 10px;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+  background-color: #3e8e41;
+}
+
+button:disabled {
+  background-color: #aaa;
+  cursor: not-allowed;
+}
+
+/* Score box */
+#score-box {
+  margin-top: 30px;
+  font-size: 1.3rem;
+  font-weight: 600;
+  text-align: center;
+  color: #1f2937;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .quiz-container {
+    padding: 25px 20px;
+  }
+
+  .quiz-container h1 {
+    font-size: 1.5rem;
+  }
+
+  .question {
+    font-size: 1rem;
+  }
+
+  button {
+    width: 100%;
+    margin: 10px 0;
+  }
+}
